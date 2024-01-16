@@ -77,4 +77,4 @@
   </section>
 
 </div>
-<?php include 'recovery.php'; ?>
+<?php include 'grafiknanas1.php'; ?>

@@ -37,65 +37,65 @@
           <div class="tab-content" style="padding: 20px">
 
             <div class="chart tab-pane active" id="tab1">
-            <div class="row" >
-              <p style="margin-left : 34px"><b> Cari Berdasarkan Tanggal :</b> </p>
+              <div class="row">
+                <p style="margin-left : 34px"><b> Cari Berdasarkan Tanggal :</b> </p>
               </div>
 
-            <form  method="post">
+              <form method="post">
 
 
-              <div class="row" style="margin-left : 14px">
-                <div class="col-md-2 ">
-                <input type="text" autocomplete='off' class="form-control datepicker" name="dari_tgl" placeholder="Dari Tanggal">
+                <div class="row" style="margin-left : 14px">
+                  <div class="col-md-2 ">
+                    <input type="text" autocomplete='off' class="form-control datepicker" name="dari_tgl" placeholder="Dari Tanggal">
+                  </div>
+                  <div class="col-md-2 ">
+                    <input type="text" autocomplete='off' class="form-control datepicker" name="sampai_tgl" placeholder="Sampai Tanggal">
+                  </div>
+                  <div class="col-md-2 ">
+                    <button type="submit" class="btn btn-success btn-sm" name="filter" value="Submit"><i class="fa fa-search" aria-hidden="true"></i> Submit </button>
+                  </div>
                 </div>
-                <div class="col-md-2 ">
-                <input type="text" autocomplete='off' class="form-control datepicker" name="sampai_tgl" placeholder="Sampai Tanggal">
-                </div>
-                <div class="col-md-2 ">
-               <button type="submit"   class="btn btn-success btn-sm" name="filter" value="Submit"><i class="fa fa-search" aria-hidden="true"></i> Submit </button>
-                </div>
-                </div>
-                </form>
-            <h4 class="text-center">Grafik Data Standar Cash  Per <b>Hari</b></h4>
+              </form>
+              <h4 class="text-center">Grafik Data Standar Cash Per <b>Hari</b></h4>
               <canvas id="myChart" style="position: relative; width: 500px height: 500px;"></canvas>
               <hr>
 
 
               <br>
               <br>
-              <div class="row" >
-              <p style="margin-left : 34px"><b>Cari Berdasarkan Tahun :</b>  </p>
+              <div class="row">
+                <p style="margin-left : 34px"><b>Cari Berdasarkan Tahun :</b> </p>
               </div>
 
-            <form  method="post">
+              <form method="post">
 
 
-              <div class="row" style="margin-left : 14px">
-                <div class="col-md-2 ">
-                <input type="text" autocomplete='off' class="form-control" name="tahun" placeholder="Tahun">
+                <div class="row" style="margin-left : 14px">
+                  <div class="col-md-2 ">
+                    <input type="text" autocomplete='off' class="form-control datepicker2" name="tahun" placeholder="Tahun">
+                  </div>
+
+                  <div class="col-md-2 ">
+                    <button type="submit" class="btn btn-success btn-sm" name="filter1" value="Submit"><i class="fa fa-search" aria-hidden="true"></i> Submit </button>
+                  </div>
                 </div>
-               
-                <div class="col-md-2 ">
-               <button type="submit"   class="btn btn-success btn-sm" name="filter1" value="Submit"><i class="fa fa-search" aria-hidden="true"></i> Submit </button>
-                </div>
-                </div>
-                </form>
-              <h4 class="text-center">Grafik Data Standar Cash  Per <b>Tahun</b></h4>
+              </form>
+              <h4 class="text-center">Grafik Data Standar Cash Per <b>Tahun</b></h4>
               <canvas id="myChart2" style="position: relative; width: 500px height: 500px;"></canvas>
 
-              <br/>
-              <br/>
-              <br/>
+              <br />
+              <br />
+              <br />
+
+            </div>
 
           </div>
-
-        </div>
 
       </section>
       <!-- /.Left col -->
 
 
-     
+
 
 
 
@@ -108,21 +108,6 @@
   </section>
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <?php include 'sc.php'; ?>

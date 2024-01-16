@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Administrator - Sistem Informasi Cannery</title>
+  <title>Administrator - Web Cannery</title>
 
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="stylesheet" href="../assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
@@ -117,19 +117,11 @@
               </span>
             </a>
             <ul class="treeview-menu" style="display: none;">
-              <li><a href="index.php"><i class="fa fa-circle-o"></i> Grafik Data Recovery</a></li>
-              <li><a href="grafik_tkline.php"><i class="fa fa-circle-o"></i> Grafik Data TK Line</a></li>
-              <li><a href="grafik_tktidakhadir.php"><i class="fa fa-circle-o"></i> Grafik Data TK Tidak Hadir</a></li>
-              <li><a href="grafik_tkproduksi.php"><i class="fa fa-circle-o"></i> Grafik Data TK Produksi</a></li>
-              <li><a href="grafik_tonaseproses.php"><i class="fa fa-circle-o"></i> Grafik Data Tonase Proses</a></li>
-              <li><a href="grafik_tonasekirim.php"><i class="fa fa-circle-o"></i> Grafik Data Tonase Kirim</a></li>
-              <li><a href="grafik_stock.php"><i class="fa fa-circle-o"></i> Grafik Data Stock</a></li>
-              <li><a href="grafik_sc.php"><i class="fa fa-circle-o"></i> Grafik Data SC<br>(Standar Cash)</a></li>
-              <li><a href="grafik_scjam.php"><i class="fa fa-circle-o"></i> Grafik Data SC/jam<br>(Standar Cash)/Jam</a></li>
-              <li><a href="grafik_mppsc.php"><i class="fa fa-circle-o"></i> Grafik MPP/SC<br>(Man Power Product)</a></li>
-              <li><a href="grafik_kapasitas.php"><i class="fa fa-circle-o"></i> Grafik Data Kapasitas</a></li>
-              <li><a href="grafik_mppkg.php"><i class="fa fa-circle-o"></i> Grafik MPP/KG<br>(Man Power Product)</a></li>
-              <li><a href="grafik_choice.php"><i class="fa fa-circle-o"></i> Grafik Data Choice</a></li>
+              <li><a href="index.php"><i class="fa fa-circle-o"></i> Grafik Data Nanas A1</a></li>
+              <li><a href="nanas2.php"><i class="fa fa-circle-o"></i> Grafik Data Nanas A2</a></li>
+              <li><a href="nanas25.php"><i class="fa fa-circle-o"></i> Grafik Data Nanas A2.5</a></li>
+              <li><a href="nanas5.php"><i class="fa fa-circle-o"></i> Grafik Data Nanas A5</a></li>
+              <li><a href="nanas10.php"><i class="fa fa-circle-o"></i> Grafik Data Nanas A10</a></li>
             </ul>
           </li>
 
@@ -137,16 +129,16 @@
           <li class="treeview">
             <a href="#">
               <i class="fa fa-folder"></i>
-              <span>DATA TRANSAKSI</span>
+              <span>DATA PRODUKSI</span>
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
             </a>
             <ul class="treeview-menu" style="display: none;">
-              <li><a href="transaksi.php"><i class="fa fa-circle-o"></i> Data Resume Cannery <br>Shift A</a></li>
-              <li><a href="transaksi_b.php"><i class="fa fa-circle-o"></i> Data Resume Cannery <br>Shift B</a></li>
-              <li><a href="transaksi_all.php"><i class="fa fa-circle-o"></i> Data Resume Cannery <br>ALL Shift</a></li>
-              <li><a href="transaksi_bulanan.php"><i class="fa fa-circle-o"></i> Data Resume Cannery <br>Bulanan</a></li>
+              <li><a href="transaksi.php"><i class="fa fa-circle-o"></i> Data Hasil Produksi <br>Shift A</a></li>
+              <li><a href="transaksi_b.php"><i class="fa fa-circle-o"></i> Data Hasil Produksi <br>Shift B</a></li>
+              <li><a href="transaksi_all.php"><i class="fa fa-circle-o"></i> Data Hasil Produksi <br>ALL Shift</a></li>
+              <li><a href="transaksi_bulanan.php"><i class="fa fa-circle-o"></i> Data Hasil Produksi <br>Bulanan</a></li>
             </ul>
           </li>
 

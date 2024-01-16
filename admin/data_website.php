@@ -65,7 +65,7 @@
     </section>
 
 </div>
-<?php include 'recovery.php'; ?>
+<?php include 'nanas1.php'; ?>
 <script>
     $(function() {
         CKEDITOR.replace('content')

@@ -31,7 +31,7 @@
 
           <ul class="nav nav-tabs pull-right">
             <!-- <li><a href="#tab2" data-toggle="tab">Pemasukan</a></li> -->
-            <li class="pull-left header">Grafik Nanas A1</li>
+            <li class="pull-left header">Grafik Nanas A2</li>
           </ul>
 
           <div class="tab-content" style="padding: 20px">
@@ -55,13 +55,12 @@
                   </div>
                   <div class="col-md-2 ">
                     <button type="submit" class="btn btn-success btn-sm" name="filter" value="Submit"><i class="fa fa-search" aria-hidden="true"></i> Submit </button>
-
                   </div>
                 </div>
               </form>
 
 
-              <h4 class="text-center">Grafik Data Nanas A1 Per <b>Hari</b></h4>
+              <h4 class="text-center">Grafik Data Nanas A2 Per <b>Hari</b></h4>
               <button id="downloadChartPDF" class="btn btn-primary">Unduh Chart</button>
               <canvas id="myChart" style="position: relative; max-width: 300px height: 300px;"></canvas>
               <hr>
@@ -79,16 +78,15 @@
 
                 <div class="row" style="margin-left : 14px">
                   <div class="col-md-2 ">
-                    <input type="text" autocomplete='off' class="form-control datepicker2" name="tahun" placeholder="Tahun">
+                    <input type="text" autocomplete='off' class="form-control" name="tahun" placeholder="Tahun">
                   </div>
 
                   <div class="col-md-2 ">
                     <button type="submit" class="btn btn-success btn-sm" name="filter1" value="Submit"><i class="fa fa-search" aria-hidden="true"></i> Submit </button>
-
                   </div>
                 </div>
               </form>
-              <h4 class="text-center">Grafik Data Nanas A1 Per <b>Tahun</b></h4>
+              <h4 class="text-center">Grafik Data Nanas A2 Per <b>Tahun</b></h4>
               <button id="downloadChartPDF2" class="btn btn-primary">Unduh Chart</button>
               <canvas id="myChart2" style="position: relative; max-width: : 300px height: 300px;"></canvas>
 
@@ -116,4 +114,4 @@
 </div>
 
 
-<?php include 'grafiknanas1.php'; ?>
+<?php include 'grafiknanas2.php'; ?>

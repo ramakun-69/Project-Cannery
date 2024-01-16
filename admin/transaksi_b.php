@@ -4,7 +4,7 @@
 
 
   <section class="content-header">
-    <h1>Data Cannery </h1>
+    <h1>Data Produksi</h1>
      <ol class="breadcrumb">
       <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
       <li class="active">Data Shift B</li>
@@ -17,7 +17,7 @@
         <div class="box box-info">
 
           <div class="box-header">
-            <h3 class="box-title">Data Resume Proses Cannery Shift B</h3>
+            <h3 class="box-title">Data Hasil Produksi Shift B</h3>
             <div class="btn-group pull-right">            
 
               <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#exampleModal">
@@ -54,83 +54,28 @@
                       </div>
 
                       <div class="form-group">
-                        <label>TK Line</label>
-                        <input type="text" name="tkline" required="required" class="form-control" placeholder="Masukkan Angka ..">
+                        <label>Nanas A1</label>
+                        <input type="text" name="nanas_a1" required="required" class="form-control" placeholder="Masukkan Angka ..">
                       </div>
 
                       <div class="form-group">
-                        <label>TK Tidak Hadir</label>
-                        <input type="text" name="tktidakhadir" required="required" class="form-control" placeholder="Masukkan Angka ..">
+                        <label>Nanas A2</label>
+                        <input type="text" name="nanas_a2" required="required" class="form-control" placeholder="Masukkan Angka ..">
                       </div>
 
                       <div class="form-group">
-                        <label>Tk Produksi</label>
-                        <input type="text" name="tkproduksi" required="required" class="form-control" placeholder="Masukkan Angka ..">
+                        <label>Nanas A2.5</label>
+                        <input type="text" name="nanas_a25" required="required" class="form-control" placeholder="Masukkan Angka ..">
                       </div>
 
                       <div class="form-group">
-                        <label>Tonase Proses</label>
-                        <input type="text" name="tonaseproses" required="required" class="form-control" placeholder="Masukkan Angka ..">
+                        <label>Nanas A5</label>
+                        <input type="text" name="nanas_a5" required="required" class="form-control" placeholder="Masukkan Angka ..">
                       </div>
 
                       <div class="form-group">
-                        <label>Tonase Kirim</label>
-                        <input type="text" name="tonasekirim" required="required" class="form-control" placeholder="Masukkan Angka ..">
-                      </div>
-
-                      <div class="form-group">
-                        <label>Stock</label>
-                        <input type="text" name="stock" required="required" class="form-control" placeholder="Masukkan Angka ..">
-                      </div>
-
-                      <div class="form-group">
-                        <label>Jam Kerja</label>
-                        <input type="text" name="jamkerja" required="required" class="form-control" placeholder="Masukkan Angka ..">
-                      </div>
-
-                      <div class="form-group">
-                        <label>SC</label>
-                        <input type="text" name="sc" required="required" class="form-control" placeholder="Masukkan Angka ..">
-                      </div>
-
-                      <div class="form-group">
-                        <label>SC/Jam</label>
-                        <input type="text" name="scjam" required="required" class="form-control" placeholder="Masukkan Angka ..">
-                      </div>
-
-                      <div class="form-group">
-                        <label>MPP(SC)</label>
-                        <input type="text" name="mppsc" required="required" class="form-control" placeholder="Masukkan Angka ..">
-                      </div>
-
-                      <div class="form-group">
-                        <label>Kapasitas</label>
-                        <input type="text" name="kapasitas" required="required" class="form-control" placeholder="Masukkan Angka ..">
-                      </div>
-
-                      <div class="form-group">
-                        <label>Recovery</label>
-                        <input type="text" name="recovery" required="required" class="form-control" placeholder="Masukkan Angka ..">
-                      </div>
-
-                      <div class="form-group">
-                        <label>Akum Rec</label>
-                        <input type="text" name="akumrec" required="required" class="form-control" placeholder="Masukkan Angka ..">
-                      </div>
-
-                      <div class="form-group">
-                        <label>Akum Kap</label>
-                        <input type="text" name="akumkap" required="required" class="form-control" placeholder="Masukkan Angka ..">
-                      </div>
-
-                      <div class="form-group">
-                        <label>MPP(Kg)</label>
-                        <input type="text" name="mppkg" required="required" class="form-control" placeholder="Masukkan Angka ..">
-                      </div>
-
-                      <div class="form-group">
-                        <label>%Choice(B)</label>
-                        <input type="text" name="choice" required="required" class="form-control" placeholder="Masukkan Angka ..">
+                        <label>Nanas A10</label>
+                        <input type="text" name="nanas_a10" required="required" class="form-control" placeholder="Masukkan Angka ..">
                       </div>
 
                     </div>
@@ -150,22 +95,11 @@
                         <th class="text-center">No</th>
                         <th class="text-center" width="10%">Tanggal</th>
                         <th class="text-center">Shift</th>
-                        <th class="text-center">TK Line</th>
-                        <th class="text-center">TK Tidak Hadir</th>
-                        <th class="text-center">TK Produksi</th>
-                        <th class="text-center">Tonase Proses</th>
-                        <th class="text-center">Tonase Kirim</th>
-                        <th class="text-center">Stock</th>
-                        <th class="text-center">Jam Kerja</th>
-                        <th class="text-center">SC(Standar Cash)</th>
-                        <th class="text-center">SC/Jam</th>
-                        <th class="text-center">MPP (SC)</th>
-                        <th class="text-center">Kapasitas</th>
-                        <th class="text-center">Recovery</th>
-                        <th class="text-center">Akum Rec</th>
-                        <th class="text-center">Akum Kap</th>
-                        <th class="text-center">MPP (Kg)</th>
-                        <th class="text-center">%Choice(B)</th>
+                        <th class="text-center">Nanas A1</th>
+                        <th class="text-center">Nanas A2</th>
+                        <th class="text-center">Nanas A2.5</th>
+                        <th class="text-center">Nanas A5</th>
+                        <th class="text-center">Nanas A10</th>
                         <th>OPSI</th>
             </tr>
           </thead>
@@ -183,22 +117,11 @@
             <td class="text-center"><?php echo $no++; ?></td>
             <td class="text-center"><?php echo date('d-m-Y', strtotime($d['tanggal'])); ?></td>
             <td class="text-center"><?php echo $d['shift']; ?></td>
-            <td class="text-center"><?php echo $d['tkline']; ?></td>
-            <td class="text-center"><?php echo $d['tktidakhadir']; ?></td>
-            <td class="text-center"><?php echo $d['tkproduksi']; ?></td>
-            <td class="text-center"><?php echo $d['tonaseproses']; ?></td>
-            <td class="text-center"><?php echo $d['tonasekirim']; ?></td>
-            <td class="text-center"><?php echo $d['stock']; ?></td>
-            <td class="text-center"><?php echo $d['jamkerja']; ?></td>
-            <td class="text-center"><?php echo $d['sc']; ?></td>
-            <td class="text-center"><?php echo $d['scjam']; ?></td>
-            <td class="text-center"><?php echo $d['mppsc']; ?></td>
-            <td class="text-center"><?php echo $d['kapasitas']; ?></td>
-            <td class="text-center"><?php echo $d['recovery']; ?></td>
-            <td class="text-center"><?php echo $d['akumrec']; ?></td>
-            <td class="text-center"><?php echo $d['akumkap']; ?></td>
-            <td class="text-center"><?php echo $d['mppkg']; ?></td>
-            <td class="text-center"><?php echo $d['choice']; ?></td>
+            <td class="text-center"><?php echo $d['nanas_a1']; ?></td>
+            <td class="text-center"><?php echo $d['nanas_a2']; ?></td>
+            <td class="text-center"><?php echo $d['nanas_a25']; ?></td>
+            <td class="text-center"><?php echo $d['nanas_a5']; ?></td>
+            <td class="text-center"><?php echo $d['nanas_a10']; ?></td>
 
            <td>    
            <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#edit_transaksi_<?php echo $d['id'] ?>">
@@ -235,90 +158,30 @@
                                   </div>
 
                                   <div class="form-group" style="width:100%;margin-bottom:20px">
-                                    <label>TK Line</label>
-                                    <input type="text" style="width:100%" name="tkline" required="required" class="form-control" placeholder="Masukkan Angka .." value="<?php echo $d['tkline'] ?>">
+                                    <label>Nanas A1</label>
+                                    <input type="text" style="width:100%" name="nanas_a1" required="required" class="form-control" placeholder="Masukkan Angka .." value="<?php echo $d['nanas_a1'] ?>">
                                   </div>
 
                                    <div class="form-group" style="width:100%;margin-bottom:20px">
-                                    <label>TK Tidak Hadir</label>
-                                    <input type="text" style="width:100%" name="tktidakhadir" required="required" class="form-control" placeholder="Masukkan Angka .." value="<?php echo $d['tktidakhadir'] ?>">
+                                    <label>Nanas A2</label>
+                                    <input type="text" style="width:100%" name="nanas_a2" required="required" class="form-control" placeholder="Masukkan Angka .." value="<?php echo $d['nanas_a2'] ?>">
                                   </div>
 
                                    <div class="form-group" style="width:100%;margin-bottom:20px">
-                                    <label>TK Produksi</label>
-                                    <input type="text" style="width:100%" name="tkproduksi" required="required" class="form-control" placeholder="Masukkan Angka .." value="<?php echo $d['tkproduksi'] ?>">
+                                    <label>Nanas A2.5</label>
+                                    <input type="text" style="width:100%" name="nanas_a25" required="required" class="form-control" placeholder="Masukkan Angka .." value="<?php echo $d['nanas_a25'] ?>">
                                   </div>
 
                                    <div class="form-group" style="width:100%;margin-bottom:20px">
-                                    <label>Tonase Proses</label>
-                                    <input type="text" style="width:100%" name="tonaseproses" required="required" class="form-control" placeholder="Masukkan Angka .." value="<?php echo $d['tonaseproses'] ?>">
+                                    <label>Nanas A5</label>
+                                    <input type="text" style="width:100%" name="nanas_a5" required="required" class="form-control" placeholder="Masukkan Angka .." value="<?php echo $d['nanas_a5'] ?>">
                                   </div>
 
                                   <div class="form-group" style="width:100%;margin-bottom:20px">
-                                    <label>Tonase Kirim</label>
-                                    <input type="text" style="width:100%" name="tonasekirim" required="required" class="form-control" placeholder="Masukkan Angka .." value="<?php echo $d['tonasekirim'] ?>">
+                                    <label>Nanas A10</label>
+                                    <input type="text" style="width:100%" name="nanas_a10" required="required" class="form-control" placeholder="Masukkan Angka .." value="<?php echo $d['nanas_a10'] ?>">
                                   </div>
-
-                                  <div class="form-group" style="width:100%;margin-bottom:20px">
-                                    <label>Stock</label>
-                                    <input type="text" style="width:100%" name="stock" required="required" class="form-control" placeholder="Masukkan Angka .." value="<?php echo $d['stock'] ?>">
-                                  </div>
-
-                                  <div class="form-group" style="width:100%;margin-bottom:20px">
-                                    <label>Jam Kerja</label>
-                                    <input type="text" style="width:100%" name="jamkerja" required="required" class="form-control" placeholder="Masukkan Angka .." value="<?php echo $d['jamkerja'] ?>">
-                                  </div>
-
-                                  <div class="form-group" style="width:100%;margin-bottom:20px">
-                                    <label>SC</label>
-                                    <input type="text" style="width:100%" name="sc" required="required" class="form-control" placeholder="Masukkan Angka .." value="<?php echo $d['sc'] ?>">
-                                  </div>
-
-                                  <div class="form-group" style="width:100%;margin-bottom:20px">
-                                    <label>SC/Jam</label>
-                                    <input type="text" style="width:100%" name="scjam" required="required" class="form-control" placeholder="Masukkan Angka .." value="<?php echo $d['scjam'] ?>">
-                                  </div>
-
-                                  <div class="form-group" style="width:100%;margin-bottom:20px">
-                                    <label>MPP(SC)</label>
-                                    <input type="text" style="width:100%" name="mppsc" required="required" class="form-control" placeholder="Masukkan Angka .." value="<?php echo $d['mppsc'] ?>">
-                                  </div>
-
-                                  <div class="form-group" style="width:100%;margin-bottom:20px">
-                                    <label>Kapasitas</label>
-                                    <input type="text" style="width:100%" name="kapasitas" required="required" class="form-control" placeholder="Masukkan Angka .." value="<?php echo $d['kapasitas'] ?>">
-                                  </div>
-
-                                  <div class="form-group" style="width:100%;margin-bottom:20px">
-                                    <label>Recovery</label>
-                                    <input type="text" style="width:100%" name="recovery" required="required" class="form-control" placeholder="Masukkan Angka .." value="<?php echo $d['recovery'] ?>">
-                                  </div>
-
-                                  <div class="form-group" style="width:100%;margin-bottom:20px">
-                                    <label>Akum Rec</label>
-                                    <input type="text" style="width:100%" name="akumrec" required="required" class="form-control" placeholder="Masukkan Angka .." value="<?php echo $d['akumrec'] ?>">
-                                  </div>
-
-                                  <div class="form-group" style="width:100%;margin-bottom:20px">
-                                    <label>Akum Kap</label>
-                                    <input type="text" style="width:100%" name="akumkap" required="required" class="form-control" placeholder="Masukkan Angka .." value="<?php echo $d['akumkap'] ?>">
-                                  </div>
-
-                                  <div class="form-group" style="width:100%;margin-bottom:20px">
-                                    <label>MPP(Kg)</label>
-                                    <input type="text" style="width:100%" name="mppkg" required="required" class="form-control" placeholder="Masukkan Angka .." value="<?php echo $d['mppkg'] ?>">
-                                  </div>
-
-                                  <div class="form-group" style="width:100%;margin-bottom:20px">
-                                    <label>Choice</label>
-                                    <input type="text" style="width:100%" name="choice" required="required" class="form-control" placeholder="Masukkan Angka .." value="<?php echo $d['choice'] ?>">
-                                  </div>
-
-
-
-
-
-
+                                </div>
 
                                 </div>
                                 <div class="modal-footer">
@@ -371,4 +234,4 @@
 </section>
 
 </div>
-<?php include 'recovery.php'; ?>
+<?php include 'grafiknanas1.php'; ?>

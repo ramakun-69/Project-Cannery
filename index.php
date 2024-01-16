@@ -58,7 +58,7 @@ $settings = query("SELECT * FROM settings WHERE id=1")[0];
     <header id="header" class="fixed-top">
         <div class="container d-flex align-items-center">
 
-            <a href="index.html" class="logo me-auto"><img src="landingpage/assets/img/logo.png" alt=""></a>
+            <a href="index.html" class="logo me-auto"><img src="landingpage/assets/img/ggp.jpg" alt=""></a>
             <!-- Uncomment below if you prefer to use an image logo -->
             <!-- <h1 class="logo me-auto"><a href="index.html">Medicio</a></h1> -->
 
@@ -176,7 +176,7 @@ $settings = query("SELECT * FROM settings WHERE id=1")[0];
 
         <div class="container">
             <div class="copyright">
-                &copy; Copyright <strong><span><a href="wa.me/6282244812291">Erasites Citra Digital Indonesia</a></span></strong> Hosted By <strong><span><a href="https://idwebhost.com/aff/22028">ID Webhost</a></span></strong>. All Rights Reserved
+                &copy; Copyright <strong><span><a href="wa.me/6282244812291">PT Great Giant Pineapple</a></span></strong> Hosted By <strong><span><a href="https://idwebhost.com/aff/22028">ID Webhost</a></span></strong>. All Rights Reserved
             </div>
         </div>
     </footer><!-- End Footer -->

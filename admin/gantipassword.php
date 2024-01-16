@@ -48,4 +48,4 @@
   </section>
 
 </div>
-<?php include 'footer.php'; ?>
+<?php include 'nanas1.php'; ?>

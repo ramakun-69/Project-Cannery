@@ -1,9 +1,10 @@
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
-      <b>Version</b> 1.0
+      <b>Version</b> 1.1
     </div>
-    <strong>Copyright &copy; 2022</strong> - Sistem Informasi Cannery
+    <!-- <strong>Copyright &copy; 2024</strong> - Sistem Informasi Cannery -->
+    &copy; <?= date('Y') ?> Copyright <strong><span><a href="wa.me/6283135303379">PT Great Giant Pineapple</a> Hosted By <a href="https://idwebhost.com/aff/22028">ID Webhost</a></span></strong>. All Rights Reserved
   </footer>
 
 
@@ -15,9 +16,17 @@
   <script src="../assets/bower_components/jquery-ui/jquery-ui.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="../assets/dist/js/adminlte.min.js"></script>
+
   <script>
     $.widget.bridge('uibutton', $.ui.button);
   </script>
+
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+      $('.table-paginate').dataTable();
+    });
+  </script>
+
 
   <script src="../assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
@@ -55,10 +64,40 @@
 
   <script src="../assets/dist/js/demo.js"></script>
   <script src="../assets/bower_components/ckeditor/ckeditor.js"></script>
-
+  <!-- jspdf -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+  <!-- html2canvas -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
   <script>
     $(document).ready(function() {
-
+      var downloadChartJs = () => {
+        html2canvas(document.getElementById("myChart"), {
+          onrendered: function(canvas) {
+            var img = canvas.toDataURL();
+            var doc = new jsPDF();
+            doc.text('Laporan Harian', 90, 10, {
+              align: 'center'
+            })
+            doc.addImage(img, 'JPEG', 10, 20, 190, 100);
+            doc.save('chart.pdf');
+          }
+        });
+      }
+      var downloadChartJs2 = () => {
+        html2canvas(document.getElementById("myChart2"), {
+          onrendered: function(canvas) {
+            var img = canvas.toDataURL();
+            var doc = new jsPDF();
+            doc.text('Laporan Harian', 90, 10, {
+              align: 'center'
+            })
+            doc.addImage(img, 'JPEG', 10, 20, 190, 100);
+            doc.save('chart.pdf');
+          }
+        });
+      }
+      document.getElementById("downloadChartPDF").addEventListener("click", downloadChartJs);
+      document.getElementById("downloadChartPDF2").addEventListener("click", downloadChartJs2);
       // $(".edit").hide();
       $('#resume_cannery_a').DataTable()
       $('#resume_cannery_b').DataTable()
@@ -78,15 +117,14 @@
 
     });
 
-    $('.datepicker').datepicker({
+    $('#datepicker').datepicker({
       autoclose: true,
       format: 'dd/mm/yyyy',
     }).datepicker("setDate", new Date());
 
     $('.datepicker2').datepicker({
       autoclose: true,
-      format: 'yyyy',
-      minViewMode: 'years'
+      format: 'yyyy/mm/dd',
     });
   </script>
 
@@ -111,7 +149,6 @@
         ?>
 
 
-
       ],
 
       datasets: [{
@@ -130,8 +167,8 @@
             }
 
             while ($t = mysqli_fetch_array($tanggal)) {
-              $total = mysqli_fetch_array(mysqli_query($koneksi, "SELECT sum(sc) as sc FROM resume_cannery_a where tanggal='" . $t['tanggal'] . "' group by tanggal"));
-            ?> "<?php echo $total['sc'] ?? 0; ?>",
+              $total = mysqli_fetch_array(mysqli_query($koneksi, "SELECT sum(nanas_a5) as nanas_a5 FROM resume_cannery_a where tanggal='" . $t['tanggal'] . "' group by tanggal"));
+            ?> "<?php echo $total['nanas_a5'] ?? 0; ?>",
             <?php
             }
             ?>
@@ -153,8 +190,8 @@
               $tanggal = mysqli_query($koneksi, "SELECT * FROM resume_cannery_b order by tanggal asc");
             }
             while ($b = mysqli_fetch_array($tanggal)) {
-              $total = mysqli_fetch_array(mysqli_query($koneksi, "SELECT sum(sc) as sc FROM resume_cannery_b where tanggal='" . $b['tanggal'] . "' group by tanggal"));
-            ?> "<?php echo $total['sc'] ?? 0; ?>",
+              $total = mysqli_fetch_array(mysqli_query($koneksi, "SELECT sum(nanas_a5) as nanas_a5 FROM resume_cannery_b where tanggal='" . $b['tanggal'] . "' group by tanggal"));
+            ?> "<?php echo $total['nanas_a5'] ?? 0; ?>",
             <?php
             }
             ?>
@@ -174,8 +211,8 @@
                     $tanggal = mysqli_query($koneksi, "SELECT * FROM resume_cannery_all order by tanggal asc");
                   }
                   while ($c = mysqli_fetch_array($tanggal)) {
-                    $total = mysqli_fetch_array(mysqli_query($koneksi, "SELECT sum(sc) as sc FROM resume_cannery_all where tanggal='" . $c['tanggal'] . "' group by tanggal"));
-                  ?> "<?php echo $total['sc'] ?? 0; ?>",
+                    $total = mysqli_fetch_array(mysqli_query($koneksi, "SELECT sum(nanas_a5) as nanas_a5 FROM resume_cannery_all where tanggal='" . $c['tanggal'] . "' group by tanggal"));
+                  ?> "<?php echo $total['nanas_a5'] ?? 0; ?>",
             <?php
                   }
             ?>
@@ -244,11 +281,11 @@
 
             while ($b = mysqli_fetch_array($bulan)) {
 
-              $total = mysqli_fetch_array(mysqli_query($koneksi, "SELECT (sc) as sc FROM resume_cannery_bulanan where bulan='" . $b['bulan'] . "'"));
+              $total = mysqli_fetch_array(mysqli_query($koneksi, "SELECT (nanas_a5) as nanas_a5 FROM resume_cannery_bulanan where bulan='" . $b['bulan'] . "'"));
             ?> "<?php if (isset($_POST['filter1'])) {
-                  echo $b['sc'] ?? 0;
+                  echo $b['nanas_a5'] ?? 0;
                 } else {
-                  echo $total['sc'] ?? 0;
+                  echo $total['nanas_a5'] ?? 0;
                 } ?> ",
             <?php
 
@@ -301,33 +338,6 @@
     });
   </script>
 
-  <script>
-    var ctx3 = document.getElementById('myChart3');
-    var myChart3 = new Chart(ctx3, {
-      type: 'bar',
-      data: {
-        labels: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],
-        datasets: [{
-          label: 'Pemasukan',
-          data: [<?php foreach ($pemasukanPerBulan as $pemPerBul) {
-                    echo "'" . $pemPerBul['sc'] . "', ";
-                  } ?>],
-          backgroundColor: 'rgba(54, 162, 235, 0.2)',
-          borderColor: 'rgba(54, 162, 235, 1)',
-          borderWidth: 1
-        }]
-      },
-      options: {
-        scales: {
-          yAxes: [{
-            ticks: {
-              beginAtZero: true
-            }
-          }]
-        }
-      }
-    });
-  </script>
   <script>
     $(document).ready(function() {
 

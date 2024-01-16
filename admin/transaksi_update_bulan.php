@@ -5,25 +5,15 @@
           $id  = $_POST['id'];
           $bulan  = $_POST['bulan'];
           $tahun = $_POST['tahun'];
-          $tkline  = $_POST['tkline'];
-          $tktidakhadir  = $_POST['tktidakhadir'];
-          $tkproduksi  = $_POST['tkproduksi'];
-          $tonaseproses  = $_POST['tonaseproses'];
-          $tonasekirim = $_POST['tonasekirim'];
-          $stock = $_POST['stock'];
-          $jamkerja = $_POST['jamkerja'];
-          $sc = $_POST['sc'];
-          $scjam = $_POST['scjam'];
-          $mppsc = $_POST['mppsc'];
-          $kapasitas = $_POST['kapasitas'];
-          $recovery = $_POST['recovery'];
-          $akumrec = $_POST['akumrec'];
-          $akumkap = $_POST['akumkap'];
-          $mppkg = $_POST['mppkg'];
-          $choice = $_POST['choice'];
+          $nanas_a1  = $_POST['nanas_a1'];
+          $nanas_a2  = $_POST['nanas_a2'];
+          $nanas_a25  = $_POST['nanas_a25'];
+          $nanas_a5  = $_POST['nanas_a5'];
+          $nanas_a10 = $_POST['nanas_a10'];
+          
 
           //query untuk menambahkan barang ke database, pastikan urutan nya sama dengan di database
-          $data = mysqli_query($koneksi,"update resume_cannery_bulanan set bulan='$bulan', tahun='$tahun',  tkline='$tkline', tktidakhadir='$tktidakhadir', tkproduksi='$tkproduksi', tonaseproses='$tonaseproses',tonasekirim='$tonasekirim',stock='$stock',jamkerja='$jamkerja',sc='$sc',scjam='$scjam',mppsc='$mppsc',kapasitas='$kapasitas',recovery='$recovery',akumrec='$akumrec',akumkap='$akumkap',mppkg='$mppkg',choice='$choice' where id='$id'") or die(mysqli_error($koneksi));
+          $data = mysqli_query($koneksi,"update resume_cannery_bulanan set bulan='$bulan', tahun='$tahun',  nanas_a1='$nanas_a1', nanas_a2='$nanas_a2', nanas_a25='$nanas_a25', nanas_a5='$nanas_a5',nanas_a10='$nanas_a10' where id='$id'") or die(mysqli_error($koneksi));
           //id barang tidak dimasukkan, karena sudah menggunakan AUTO_INCREMENT, id akan otomatis
 
           //ini untuk menampilkan alert berhasil dan redirect ke halaman index
