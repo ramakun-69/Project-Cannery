@@ -60,7 +60,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
   <!-- html2canvas -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
-
+  <!-- Data Labels Chart JS -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
 
   <script>
     $(document).ready(function() {
@@ -232,6 +234,20 @@
             beginAtZero: true
           }
         }]
+      },
+      plugins: {
+        datalabels: {
+          color: 'black',
+          formatter: function(value, context) {
+            return value;
+          },
+          font: {
+            weight: 'bold'
+          },
+          anchor: 'center',
+          align: 'center',
+          offset: 1
+        }
       }
     }
 
@@ -239,7 +255,8 @@
     window.myBar = new Chart(ctx, {
       type: "bar",
       data: barChartData,
-      options: chartOptions
+      options: chartOptions,
+      plugins: [ChartDataLabels],
     });
   </script>
 

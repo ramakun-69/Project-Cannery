@@ -68,6 +68,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
   <!-- html2canvas -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+  <!-- Data Labels Chart JS -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
   <script>
     $(document).ready(function() {
       var downloadChartJs = () => {
@@ -141,14 +144,11 @@
           $tanggal = mysqli_query($koneksi, "SELECT * FROM resume_cannery_a where month(tanggal) ='$tgl' order by tanggal asc");
         }
 
-
         while ($t = mysqli_fetch_array($tanggal)) {
         ?> "<?php echo $t['tanggal']; ?>",
         <?php
         }
         ?>
-
-
       ],
 
       datasets: [{
@@ -172,7 +172,6 @@
             <?php
             }
             ?>
-
           ]
         },
         {
@@ -202,22 +201,23 @@
           backgroundColor: "lightgreen",
           borderColor: "green",
           borderWidth: 1,
-          data: [<?php
-                  if (isset($_POST['filter'])) {
-                    $dari_tgl =  mysqli_real_escape_string($koneksi, $_POST['dari_tgl']);
-                    $sampai_tgl = mysqli_real_escape_string($koneksi, $_POST['sampai_tgl']);
-                    $tanggal = mysqli_query($koneksi, "SELECT * FROM resume_cannery_all WHERE tanggal BETWEEN '$dari_tgl' AND '$sampai_tgl' order by tanggal asc ");
-                  } else {
-                    $tanggal = mysqli_query($koneksi, "SELECT * FROM resume_cannery_all order by tanggal asc");
-                  }
-                  while ($c = mysqli_fetch_array($tanggal)) {
-                    $total = mysqli_fetch_array(mysqli_query($koneksi, "SELECT sum(nanas_a25) as nanas_a25 FROM resume_cannery_all where tanggal='" . $c['tanggal'] . "' group by tanggal"));
-                  ?> "<?php echo $total['nanas_a25'] ?? 0; ?>",
+          data: [
             <?php
-                  }
+            if (isset($_POST['filter'])) {
+              $dari_tgl =  mysqli_real_escape_string($koneksi, $_POST['dari_tgl']);
+              $sampai_tgl = mysqli_real_escape_string($koneksi, $_POST['sampai_tgl']);
+              $tanggal = mysqli_query($koneksi, "SELECT * FROM resume_cannery_all WHERE tanggal BETWEEN '$dari_tgl' AND '$sampai_tgl' order by tanggal asc ");
+            } else {
+              $tanggal = mysqli_query($koneksi, "SELECT * FROM resume_cannery_all order by tanggal asc");
+            }
+            while ($c = mysqli_fetch_array($tanggal)) {
+              $total = mysqli_fetch_array(mysqli_query($koneksi, "SELECT sum(nanas_a25) as nanas_a25 FROM resume_cannery_all where tanggal='" . $c['tanggal'] . "' group by tanggal"));
+            ?> "<?php echo $total['nanas_a25'] ?? 0; ?>",
+            <?php
+            }
             ?>
           ]
-        },
+        }
       ]
     };
 
@@ -236,6 +236,20 @@
             beginAtZero: true
           }
         }]
+      },
+      plugins: {
+        datalabels: {
+          color: 'black',
+          formatter: function(value, context) {
+            return value;
+          },
+          font: {
+            weight: 'bold'
+          },
+          anchor: 'center',
+          align: 'center',
+          offset: 1
+        }
       }
     }
 
@@ -243,9 +257,11 @@
     window.myBar = new Chart(ctx, {
       type: "bar",
       data: barChartData,
-      options: chartOptions
+      options: chartOptions,
+      plugins: [ChartDataLabels],
     });
   </script>
+
 
   <script>
     var ctx2 = document.getElementById("myChart2").getContext('2d');
